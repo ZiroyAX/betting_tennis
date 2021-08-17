@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="./style.css">
+    <title>Ставки на спорт</title>
+  </head>
+  <body>
+    <ul class="mainMenu">
+      <li>
+        <input autofocus id="urlForPars" type="text" placeholder="Paste url">
+        <button id="btnParsing">Parsing flashscore</button>
+         - Начать парсинг
+      </li>
+      <li>
+        <button id="btnSaveToDBFullExcel">Save to excel</button>
+         - Сохранить в эксель
+      </li>
+      <li>
+        <button id="btnOpenSecondaryExcel">Open secondary excel</button>
+         - Открыть для просчета результатов
+      </li>
+      <li>
+        <button id="btnOpenMainExcel">Open main excel</button>
+         - Открыть главный эксель для получения общего результата
+      </li>
+      <li>
+        <input class="transformInput" id="transformInputBegin" type="text" placeholder="Begin">
+        <input class="transformInput" id="transformInputEnd" type="text" placeholder="End">
+        <input class="transformInput" id="transformInputCurrentSheet" type="text" placeholder="CSheet">
+        <input class="transformInput" id="transformInputNewSheet" type="text" placeholder="NSheet">
+        <button id="btnTransformationUnderTheory">transform me!!!</button>
+         - Преобразование под скрипт
+      </li>
+      <li>
+        <input class="transformInput" id="inputUpdateTheorysTotalBegin" type="text" placeholder="Begin">
+        <input class="transformInput" id="inputUpdateTheorysTotalEnd" type="text" placeholder="End">
+        <button id="btnUpdateTheorysTotal">Поиск всех теорий на тотал</button>
+         - Сохранение в JSON
+      </li>
+      <li>
+        <input class="transformInput" id="inputUpdateTheorysWinBegin" type="text" placeholder="Begin">
+        <input class="transformInput" id="inputUpdateTheorysWinEnd" type="text" placeholder="End">
+        <button id="btnUpdateTheorysWin">Поиск всех теорий на победу</button>
+         - Сохранение в JSON
+      </li>
+      <li>
+        <button id="btnOpenChartTotal">Открыть график теорий на тотал</button>
+         - Данные из allTheoryTotal.json
+      </li>
+      <li>
+        <button id="btnOpenChartWin">Открыть график теорий на победу</button>
+         - Данные из allTheoryWin.json
+      </li>
+    </ul>
+    
+    <ul class="menu">
+      <li><button id="btnMain">Главная</button></li>
+      <li><button id="btnGround">Грунт</button></li>
+      <li><button id="btnGrass">Трава</button></li>
+      <li><button id="btnHard">Хард</button></li>
+      <li><button id="btnWL">1х2</button></li>
+      <li><button id="btnBL">Б/М</button></li>
+      <li><button id="btnAccurateScore">Точный счёт</button></li>
+    </ul>
+    <div id="matchesGround" class="isHidden">
+      <button id="btnMatchesGroundOne">One</button>
+      <button id="btnMatchesGroundTwo">Two</button>
+      <button id="btnMatchesGroundJoint">Joint</button>
+      <div id='currentContentGround'></div>
+    </div>
+    <div id="matchesGrass" class="isHidden">
+      <button id="btnMatchesGrassOne">One</button>
+      <button id="btnMatchesGrassTwo">Two</button>
+      <button id="btnMatchesGrassJoint">Joint</button>
+      <div id='currentContentGrass'></div>
+    </div>
+    <div id="matchesHard" class="isHidden">
+      <button id="btnMatchesHardOne">One</button>
+      <button id="btnMatchesHardTwo">Two</button>
+      <button id="btnMatchesHardJoint">Joint</button>
+      <div id='currentContentHard'></div>
+    </div>
+    <div id="ratioWL" class=""></div>
+    <div id="ratioBL" class=""></div>
+    <div id="ratioAccurateScore" class=""></div>
+    <div class='getChart'>
+      <canvas id="myChart" width="2000" height="400"></canvas>
+      <canvas id="myChart2" width="2000" height="400"></canvas>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script src="./utilitys/workWithChart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "betting_tennis",
+  "version": "0.1.0",
+  "description": "Hello World!",
+  "main": "main.js",
+  "author": "Evelate",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "pars": "node ./nightmare.js"
+  },
+  "devDependencies": {
+    "electron": "^13.1.4",
+    "electron-reloader": "^1.2.1"
+  },
+  "dependencies": {
+    "chart.js": "^3.4.1",
+    "nightmare": "^3.0.2",
+    "nightmare-window-manager": "^0.2.2",
+    "open": "^8.2.1",
+    "xlsx-populate": "^1.21.0"
+  }
+}

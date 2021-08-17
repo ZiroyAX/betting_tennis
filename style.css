@@ -1,0 +1,52 @@
+p {
+  margin: 0;
+  background-color: white;
+}
+button {
+  margin: 2px;
+}
+
+input {
+  margin: 2px;
+}
+
+.mainMenu {
+  width: 600px;
+}
+
+.transformInput {
+  width: 50px;
+}
+
+.matches {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(6, 50px) */
+}
+
+.matches p {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  width: 415px;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  padding: 0;
+  margin: 10px;
+  list-style: none;
+}
+
+.menu li {
+  padding: 0;
+  margin: 0;
+}
+
+.isHidden {
+  display: none;
+}
+.getChart{
+  width: 500px;
+  overflow: auto;
+}
